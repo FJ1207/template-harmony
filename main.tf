@@ -40,15 +40,6 @@ resource "harmony_project" "test" {
       password    = lookup(registries.value, "password", "")
     }
   }
-  //ns_list = []
-  //namespace_list = []
-  //harbor 66挂了
-  #  project_registries{
-  #    registry_id = "c98d95ea79b14d1f"
-  #    nickname = "harbor194"
-  #    username = "lianb-xm-ja2iaf"
-  #    password = "eogio7rT"
-  #  }
 }
 
 # 项目下绑定命名空间
@@ -57,7 +48,7 @@ resource "harmony_namespace" "test" {
   alias_name     = var.namespace_alias_name
   tenant_id      = harmony_tenants.test.id
   data_center    = var.namespace_data_center
-  cluster_id     = harmony_quotas.test.tenant_id
+  cluster_id     = harmony_quotas.test.cluster_id
   node_pool_name = harmony_quotas.test.node_pool_name
   cpu            = var.namespace_cpu
   memory         = var.namespace_memory

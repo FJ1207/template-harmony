@@ -90,7 +90,7 @@ variable "project_registries" {
   type        = list(map(any))
   default     = [
     {
-      registry_id = "ea1951745f054ce1"
+      registry_id = "5ddb1baff5fc45fb"
     },
     {
       registry_id = "c98d95ea79b14d1f",
